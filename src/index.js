@@ -1,17 +1,61 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import emojipedia from './emojipedia';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+console.log(emojipedia);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const summary = emojipedia.map((obj) => {
+    return obj.meaning.substring(0,100);
+})
+
+console.log(summary);
+
+
+
+// const numbers = [3, 56, 2, 48, 5];
+
+// // MAP -Create a new array by doing something with each item in an array.
+
+// const double = x => {
+//     return x * 2;
+// }
+
+// const doubleNumbers = numbers.map(double)
+// console.log(`MAP: ${doubleNumbers}`);
+
+// // forEach alternative
+
+// numbers.forEach(double);
+
+// // FILTER - Create a new array by keeping the items that return true.
+
+// const aboveTen = numbers.filter((num) => {
+//     return num > 10;
+// });
+
+// console.log(`FILTER: ${aboveTen}`);
+
+
+// // REDUCE - Accumulate a value by doing something to each item in an array.
+
+// const totalNumbers = numbers.reduce((accumalator, currentNumber) => {
+//     return accumalator + currentNumber;
+// });
+
+// console.log(`REDUCE: ${totalNumbers}`);
+
+
+// // Find - find the first item that matches from an array.
+
+// const firstNumber = numbers.find((num) => {
+//     return num > 10;
+// })
+
+// console.log(`FIND: ${firstNumber}`);
+
+
+// // FindIndex - find the index of the first item that matches.
+
+// const indexNumber = numbers.findIndex((i) => {
+//     return i > 4;
+// })
+
+// console.log(`findIndex: ${indexNumber}`);
